@@ -1,0 +1,26 @@
+services:
+  # Backend (Spring Boot) via Docker
+  - type: web
+    name: mentoring-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    plan: free
+    envVars:
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://mentoring-frontend.onrender.com,http://localhost:3000"
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+
+  # Frontend (Next.js)
+  - type: web
+    name: mentoring-frontend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        value: https://mentoring-backend.onrender.com
