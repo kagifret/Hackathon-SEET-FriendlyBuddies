@@ -22,6 +22,9 @@ We developed a hybrid decision support platform that balances automation with hu
 - Compatibility is calculated using a formula consisting of 70% Hard/Soft Filters, 15% AI Chat Evaluation, and 15% User Feedback. 
 - An Admin Dashboard provides a control panel for SEET administrators to approve, reject, or force matches based on the system's draft recommendations.
 
+## Demo video
+Visit the following link to view the demo video: https://drive.google.com/file/d/12aGAV2PQ9qHIt7j-J76POCmy7NmY_E1o/view?usp=sharing
+
 
 ## AI usage
 We utilized generative AI (Gemini 2.5 Pro, GitHub Copilot, ChatGPT) throughout the project. The role of AI shifted from a "teammate" during the ideation phase to a specific "tool" for coding and debugging during execution.
